@@ -6,9 +6,9 @@ export const DECREMENT = "DECREMENT";
 //actionを返すものActionCreator
 
 export const increment = () => ({
-    type: INCREMENT
+  type: INCREMENT
 });
 
-export const increment = () => ({
-    type: DECREMENT
+export const decrement = () => ({
+  type: DECREMENT
 });
