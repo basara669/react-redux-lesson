@@ -1,19 +1,29 @@
 import * as React from "react";
-const { useState, useEffect } = React;
+const { useState, useContext, createContext } = React;
 
-export const UseEffectSample1 = () => {
+const MyContext = createContext(() => {});
+
+export const UseContextSample = () => {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      setCount(count => count + 1);
-    }, 1000);
-    return () => clearTimeout(timerId);
-  }, [count]);
+  return (
+    <div>
+      <p>
+        <b>{count}</b>
+      </p>
+      <MyContext.Provider value={() => setCount(count => count + 1)}>
+        <IncrementButton />
+      </MyContext.Provider>
+    </div>
+  );
+};
+
+const IncrementButton = () => {
+  const incrementHandler = useContext(MyContext);
 
   return (
     <p>
-      time: <b>{count}</b>
+      <button onClick={incrementHandler}>+</button>
     </p>
   );
 };
