@@ -1,4 +1,6 @@
 import React from "react";
+
+//まずはimport
 import PropTypes from "prop-types";
 
 const App = () => {
