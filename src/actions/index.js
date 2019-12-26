@@ -4,7 +4,6 @@ export const DECREMENT = "DECREMENT";
 
 //オブジェクトのこと
 //actionを返すものActionCreator
-
 export const increment = () => ({
   type: INCREMENT
 });

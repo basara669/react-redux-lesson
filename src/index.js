@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+//storeを使うもの
 import { createStore } from "redux";
+//componentにわたすもの
 import { Provider } from "react-redux";
 
 import "./index.css";
@@ -11,6 +13,8 @@ import * as serviceWorker from "./serviceWorker";
 const store = createStore(reducer);
 
 ReactDOM.render(
+  //Providerでラップするだけ
+  //いちいち親から子供にpropsを渡す必要がなくなった
   <Provider store={store}>
     <App />
   </Provider>,
