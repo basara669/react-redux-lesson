@@ -26,8 +26,10 @@ const User = props => {
   );
 };
 
+//このように書く
 User.propTypes = {
   name: PropTypes.string,
+  //必須の場合
   age: PropTypes.number.isRequired
 };
 
