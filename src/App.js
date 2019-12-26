@@ -21,6 +21,7 @@ class App extends Component {
     //     />
     //   </div>
     // );
+    // ここで色々確認出来ます https://babeljs.io/repl
   }
 }
 
